@@ -1,0 +1,26 @@
+approval-guard 1.0.0
+Wallet: 0xd8da6bf26964af9d7eed9e03e53415d37aa96045
+Read-only audit: no keys asked, nothing signed.
+
+== ethereum ==
+  [HIGH] USDT -> Uniswap V3 Router
+       allowance: UNLIMITED USDT | balance: 291.3682 USDT
+       spender: 0xE592427A0AEce92De3Edee1F18E0157C05861564
+       why: unlimited allowance
+  [HIGH] DAI -> Permit2
+       allowance: UNLIMITED DAI | balance: 14.372 DAI
+       spender: 0x000000000022D473030F116dDEE9F6B43aC78BA3
+       why: unlimited allowance
+  [HIGH] WBTC -> Uniswap V3 Router
+       allowance: UNLIMITED WBTC | balance: 0 WBTC
+       spender: 0xE592427A0AEce92De3Edee1F18E0157C05861564
+       why: unlimited allowance
+  [HIGH] LINK -> Uniswap V3 Router
+       allowance: UNLIMITED LINK | balance: 0 LINK
+       spender: 0xE592427A0AEce92De3Edee1F18E0157C05861564
+       why: unlimited allowance
+
+Summary: 4 allowance(s) found (HIGH 4, MEDIUM 0, LOW 0)
+HIGH findings mean a contract can move ALL of that token, now and in the future.
+To revoke: revoke.cash, or call approve(spender, 0) from your wallet.
+Scope: curated tokens x known protocol contracts, plus any --token / --spender given. Approvals outside that set are not seen; cross-check with an explorer.
